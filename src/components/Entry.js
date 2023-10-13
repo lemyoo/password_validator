@@ -42,36 +42,37 @@ const Entry = () => {
     setHasNumberCase(containsNumber(password));
   }, [password]);
   return (
-    <Paper sx={{ height: "50vh", width: "50vw" }}>
-      <FormGroup>
-        <FormControlLabel
-          control={
-            <TextField
-              fullWidth
-              id="outlined-basic"
-              variant="outlined"
-              onChange={(e) => {
-                passWordOnChange(e);
-              }}
-            />
-          }
-          label="password"
-        />
-      </FormGroup>
-      <FormGroup>
-        <FormControlLabel
-          control={<Checkbox checked={twelveCha} />}
-          label="Atleast 12 characters long"
-        />
-        <FormControlLabel
-          control={<Checkbox checked={specialChar} />}
-          label="Has special character(s)"
-        />
-        <FormControlLabel control={<Checkbox checked={hasUpperCase} />} label="Has upper case" />
-        <FormControlLabel control={<Checkbox checked={hasLowerCase} />} label="Has lower case" />
-        <FormControlLabel control={<Checkbox checked={hasNumber} />} label="Has number(s)" />
-      </FormGroup>
-    </Paper>
+    <div>
+      <Paper sx={{ height: "50vh", width: "70vw", margin: "auto", padding: 10 }}>
+        <FormGroup>
+          <FormControlLabel
+            control={
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                label="password"
+                onChange={(e) => {
+                  passWordOnChange(e);
+                }}
+              />
+            }
+          />
+        </FormGroup>
+        <FormGroup>
+          <FormControlLabel
+            control={<Checkbox checked={twelveCha} />}
+            label="Atleast 12 characters long"
+          />
+          <FormControlLabel
+            control={<Checkbox checked={specialChar} />}
+            label="Has special character(s)"
+          />
+          <FormControlLabel control={<Checkbox checked={hasUpperCase} />} label="Has upper case" />
+          <FormControlLabel control={<Checkbox checked={hasLowerCase} />} label="Has lower case" />
+          <FormControlLabel control={<Checkbox checked={hasNumber} />} label="Has number(s)" />
+        </FormGroup>
+      </Paper>
+    </div>
   );
 };
 

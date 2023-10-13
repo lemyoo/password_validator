@@ -7,3 +7,5 @@ I am using the following rules
 - Has lowercase letters.
 - Has numbers.
 - Has special characters.
+
+A live demo is on https://passwordvalidator.netlify.app/
