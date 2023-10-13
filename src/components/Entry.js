@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Paper, FormControlLabel, FormGroup, Checkbox, TextField } from "@mui/material";
+import { Paper, FormControlLabel, FormGroup, Checkbox, TextField, Typography } from "@mui/material";
 
 const Entry = () => {
   const [twelveCha, setTwelveCha] = useState(false);
@@ -23,7 +23,7 @@ const Entry = () => {
   };
 
   const containsNumber = (str) => {
-    const numbers = /^[0-9]/;
+    const numbers = /[0-9]/;
     return numbers.test(str);
   };
 
@@ -43,7 +43,10 @@ const Entry = () => {
   }, [password]);
   return (
     <div>
-      <Paper sx={{ height: "50vh", width: "70vw", margin: "auto", padding: 10 }}>
+      <Paper sx={{ height: "70vh", width: "70vw", margin: "auto", padding: 10 }}>
+        <Typography paddingBottom={1} fontSize={24} fontWeight={"bold"}>
+          Password Validator
+        </Typography>
         <FormGroup>
           <FormControlLabel
             control={
